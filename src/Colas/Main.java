@@ -13,7 +13,7 @@ public class Main {
 		// TODO Esbozo de método generado automáticamente
 
 		
-		ArrayBasedQueue colas = new ArrayBasedQueue(10);
+		ArrayBasedQueue array = new ArrayBasedQueue(10);
 		
 		LinkedListBasedQueue listas = new LinkedListBasedQueue();
 		String dato;
@@ -49,24 +49,24 @@ public class Main {
 					case 1:{
 						System.out.println("Escriba el dato que quiere encolar");
 						dato = entrada.nextLine();
-						colas.enqueue(dato);
+						array.enqueue(dato);
 						espacio();
 						break;
 					}
 					case 2:{
 						System.out.println("Escriba el dato que quiera desencolar");
-						System.out.println( colas.dequeue());
+						System.out.println( array.dequeue());
 						espacio();
 						break;
 					}
 					case 3:{
 						System.out.println("El siguiente dato es: ");
-						System.out.println( colas.peek());
+						System.out.println( array.peek());
 						espacio();
 						break;
 					}
 					case 4:{
-						System.out.println( (colas.size() +1)+ " datos");
+						System.out.println( (array.size() +1)+ " datos");
 						espacio();
 						break;
 					}

@@ -48,7 +48,7 @@ public class ArrayBasedQueue {
 	 */
 	public void enqueue(Object item) {
 		if (size == array.length) {
-			throw new IllegalStateException("Cannot add to full queue");
+			throw new IllegalStateException("No se puede sacar de la cola desde una cola vacía");
 		} 
 		array[tail] = item;
 		tail = (tail + 1) % array.length;
@@ -63,7 +63,7 @@ public class ArrayBasedQueue {
 	 */
 	public Object dequeue() {
 		if (size == 0) {
-			throw new NoSuchElementException("No se puede eliminar de la cola vacía");
+			throw new NoSuchElementException("No se puede mirar desde la cola vacía");
 		}
 		Object item = array[head];
 		array[head] = null;
@@ -79,7 +79,7 @@ public class ArrayBasedQueue {
 	 */
 	public Object peek() {
 		if (size == 0) {
-			throw new NoSuchElementException("No se puede mirar desde la cola vacía");
+			throw new NoSuchElementException("Cannot peek from empty queue");
 		}
 		return array[head];
 	}
